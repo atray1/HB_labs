@@ -50,7 +50,7 @@ def show_madlib_form():
     else:
         return render_template("goodbye.html")
 
-@app.route("/madlib")
+@app.route("/madlib" )
 def show_madlib():
 
     person = request.args.get("person")
