@@ -57,7 +57,6 @@
 
     const coffeeImage = document.querySelector('#coffee-image')
     // const revenueMessage;
-    coffeeImage.getAttribute('src');
 
     // use this JavaScript object in further study step
 
@@ -69,7 +68,24 @@
     };
 
     //make coffee function
-    coffeeImage.onclick = () => coffeeImage.setAttribute('src', 'static/coffee_mug.jpg')
+
+    document.getElementById('coffee-image').onclick = makeCoffee
+    
+    function makeCoffee() {
+        coffeeImage.setAttribute('src', 'static/coffee_machine.jpg')
+        setTimeout(serveCoffee, 1500);
+    } 
+
+    function serveCoffee() {
+        coffeeImage.setAttribute('src', 'static/coffee_mug.jpg')
+        setTimeout(resetCoffee, 2500);
+    }
+
+    function resetCoffee() {
+        coffeeImage.setAttribute('src', 'static/coffee_beans.jpg') 
+    }
+
+    // coffeeImage.onclick = () => coffeeImage.setAttribute('src', 'static/coffee_mug.jpg')
 
     // (a,b) => return a + b
 
